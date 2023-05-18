@@ -28,7 +28,7 @@ df = pd.read_csv(r'ethylene.csv')
 
 df['time'] = pd.to_datetime(df['time'])
 df.set_index('time', inplace=True)
-
+#月平均且每月第一天
 df_mean = df.resample('MS').mean()
 df_std = df.resample('MS').std()
 
